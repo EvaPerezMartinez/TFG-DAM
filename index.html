@@ -38,6 +38,7 @@
                 </ul>
             </nav>
         </header>
+
         <!--Contenido principal de la web-->
         <main>
             <section class="intro">
@@ -46,41 +47,49 @@
             <section class="index">
                 <!--Indice de la página principal (Cada punto llevará al apartado correspondiente)-->
                 <ul>
-                    <li>Beneficios de la Web</li>
-                    <li>Formulario de Contacto</li>
-                    <li>Funcionalidades Principales</li>
-                    <li>Todas las Funcionalidades</li>
-                    <li>Requerimientos Mínimos</li> <!-- OJO | Poner también los requerimientos en el apartado de Descargar la APP-->
-                    <li>Pregunta Frecuentes</li>
-                    <li>Valoraciones y Reseñas</li>
+                    <li><a href="#beneficios">Beneficios de (nombre)</a></li>
+                    <li><a href="#formulario">Formulario de Contacto</a></li>
+                    <li><a href="#funcionesPrincipales">Principales Funcionalidades</a></li>
+                    <li><a href="#todasFuncionalidades">Todas las Funcionalidades</a></li>
+                    <li><a href="#requerimientos">Requerimientos Mínimos</a></li> <!-- OJO | Poner también los requerimientos en el apartado de Descargar la APP-->
+                    <li><a href="#valoraciones">Valoraciones y Reseñas</a></li>
+                    <li><a href="#preguntasFrecuentes">Pregunta Frecuentes</a></li>                    
                 </ul>
             </section>
             <!-- OJO | Completar las secciones de la web sobre la app-->
-            <section class="beneficios">
+            <section id="beneficios">
+                <h2>Beneficios de (nombre)</h2>
+            </section>
 
+            <section id="formulario">
+                <p>Contacta con nosotros a través del siguiente enlace</p>
+                <button><a href="./secciones/contacto.html"><p>Ponte en contacto</p></a></button> <!--Lleva a otro apartado/html-->
             </section>
-            <section class="formulario">
-                <a href="./secciones/contacto.html">Contacta con nosotros a través del siguiente enlace</a> <!--Lleva a otro apartado/html-->
-            </section>
-            <section class="funcionesPrincipales">
 
+            <section id="funcionesPrincipales">
+                <h2>Principales Funcionalidades</h2>
             </section>
-            <section class="todasFuncionalidades">
 
+            <section id="todasFuncionalidades">
+                <h2>Todas las Funcionalidades</h2>
             </section>
-            <section class="requerimientos">
 
+            <section id="requerimientos">
+                <h2>Requerimientos Mínimos</h2>
             </section>
-            <section class="preguntasFrecuentes">
+
+            <section id="valoraciones">
+                <h2>Valoraciones y Reseñas</h2>
+            </section>
+
+            <section id="preguntasFrecuentes">
+                <h2>Preguntas Frecuntes</h2>
+            </section>
             
-            </section>
-            <section class="valoraciones">
-
-            </section>
-
-            <!-- OJO | Poner un botón que te lleve al inicio de la sección sin hacer scroll-->
-             
+            <!--Botón que te lleve al inicio de la sección sin hacer scroll-->
+            <button style="" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">➜</button><!-- OJO | Elegir una flecha ⮝🠝⬆-->
         </main>
+
         <!--Pie de la página-->
         <footer>
             <div class="footer-container">
