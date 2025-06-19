@@ -10,50 +10,26 @@
     </head>
     <!-- OJO BORRAR EL COMMENT AL ACABAR | Aquí va un formulario para ponerse en contacto a través de correo electrónico-->
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <il><a href="../index.html">(Nombre de la empresa)</a></il> <!--Lleva a la página inicial-->
-                    <il><a href="./blog.html">Blog</a></il> <!--Lleva a un blog sobre la empresa-->
-                    <il><a href="./sobreNosotros.html">Sobre Nosotros</a></il> <!--Lleva a una sección dónde se habla de la empresa-->
-                    <il><a href="./contacto.html">Contactanos</a></il> <!--Lleva a un apartado para poder contactarnos (un formulario)-->
-                    <il><a href="./registro.html">Registrarse</a></il> <!--Lleva a un apartado para que el user pueda registrarse-->
-                    <il><a href="./sesion.html">Iniciar Sesión</a></il> <!--Lleva a un apartado para que el user pueda inicar sesión-->
-                    <il><a href="./descarga.html">Descargar</a></il> <!--Lleva a un apartado para que se pueda descargar la app-->
-                </ul>
-            </nav>
-        </header>
         <!--Contenido principal de la web-->
         <main>
-
+            <form>
+                <h1>Contacta con Nosotros</h1>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="nombre" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="subject">Asunto:</label>
+                <input type="text" id="subject" name="asunto" required><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="mensaje" rows="4" required></textarea>
+                <br><br>
+                <input type="checkbox" id="politicas" name="politicas" required>
+                <label for="politicas">He leído y acepto las <a href="">Políticas de Privacidad</a>. Esta información será utilizada para ponerse en contacto con usted a través de correo electrónico.*</label> <!--Un link que lleve a las políticas-->
+                <br><br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Cancelar</button>
+            </form>
         </main>
-        <!--Pie de la página-->
-        <footer>
-            <div class="footer-container">
-                <div class="footer-copyright">
-                    <p>Copyright ©</p>
-                </div>
-                <div class="footer-info">
-                    <div class="footer-contact">
-                        <p>Información de Contacto:</p>
-                        <p>Email: perezmartinezeva@gmail.com</p>
-                        <p>Tlf: +34 698 54 01 81</p>
-                    </div>
-                    <div class="footer-links">
-                        <a><p>Funcionalidades</p></a>
-                        <a href="./sobreNosotros.html"><p>Sobre Nosotros</p></a>
-                    </div>
-                </div>
-                <div class="footer-legal">
-                    <span><a>Avisos Legales</a>    |    </span><span><a>Cookies</a></span>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com"><img></a> <!-- target="_blank" abre la página en una nueva pestaña (poner en el css)-->
-                    <a href="https://www.twitter.com"><img></a>
-                    <a href="https://www.instagram.com"><img></a>
-                </div>
-            </div>
-        </footer>
         <script src="../js/script.js"></script>
     </body>
 </html>
