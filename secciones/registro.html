@@ -11,53 +11,30 @@
     <!-- OJO BORRAR EL COMMENT AL ACABAR | Aquí va un formulario para poder registrar al user y poder guardar la info en la BBDD-->
     <body>
         <body>
-        <header>
-            <nav>
-                <ul>
-                    <il><a href="../index.html">(Nombre de la empresa)</a></il> <!--Lleva a la página inicial-->
-                    <il><a href="./blog.html">Blog</a></il> <!--Lleva a un blog sobre la empresa-->
-                    <il><a href="./sobreNosotros.html">Sobre Nosotros</a></il> <!--Lleva a una sección dónde se habla de la empresa-->
-                    <il><a href="./registro.html">Registrarse</a></il> <!--Lleva a un apartado para que el user pueda registrarse-->
-                    <il><a href="./sesion.html">Iniciar Sesión</a></il> <!--Lleva a un apartado para que el user pueda inicar sesión-->
-                    <il><a href="./descarga.html">Descargar</a></il> <!--Lleva a un apartado para que se pueda descargar la app-->
-                </ul>
-            </nav>
-        </header>
-
         <!--Contenido principal de la web-->
         <main>
-            <form>
-                
-            </form>            
-        </main>
-
-        <!--Pie de la página-->
-        <footer>
-            <div class="footer-container">
-                <div class="footer-copyright">
-                    <p>Copyright ©</p>
-                </div>
-                <div class="footer-info">
-                    <div class="footer-contact">
-                        <p>Información de Contacto:</p>
-                        <p>Email: perezmartinezeva@gmail.com</p>
-                        <p>Tlf: +34 698 54 01 81</p>
-                    </div>
-                    <div class="footer-links">
-                        <a><p>Funcionalidades</p></a>
-                        <a href="./sobreNosotros.html"><p>Sobre Nosotros</p></a>
-                    </div>
-                </div>
-                <div class="footer-legal">
-                    <span><a>Avisos Legales</a>    |    </span><span><a>Cookies</a></span>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com"><img></a> <!-- target="_blank" abre la página en una nueva pestaña (poner en el css)-->
-                    <a href="https://www.twitter.com"><img></a>
-                    <a href="https://www.instagram.com"><img></a>
-                </div>
+            <div class="login-container">
+                <p>¿Ya tienes una cuenta?</p>
+                <a href="./sesion.html"><p>Iniciar Sesión</p></a> <!--Poner el enlace a Iniciar Sesión-->
             </div>
-        </footer>
+            <div class="form-container">
+                <form>
+                    <h1>Registro</h1>
+                    <label for="name">Nombre:</label><br>
+                    <input type="text" id="name" name="nombre" required><br><br>
+                    <label for="subname">Apellidos:</label><br>
+                    <input type="text" id="subname" name="apellidos" required><br><br>
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email"required><br><br>
+                    <label for="tlf">Teléfono:</label><br>
+                    <input type="tel" id="tlf" name="telefono" required><br><br>
+                    <label for="password">Contraseña:</label><br>
+                    <input type="password" id="password" name="contraseña" required><br><br><br>
+                    <button type="submit">Registrarse</button><br>
+                    <p>Al registrarse confirma que acepta nuestras <a href="">Cookies</a></p> <!--Poner el enlace a las políticas de la empresa-->
+                </form>
+            </div>          
+        </main>
         <script src="../js/script.js"></script>
     </body>
 </html>
