@@ -1,0 +1,144 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* -------- NAVBAR -------- */
+.navbar {
+  background: #0a2a43; /* azul oscuro */
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00aaff;
+}
+
+/* -------- FOOTER -------- */
+footer {
+  background: #0a2a43; /* azul oscuro */
+  color: white;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+.footer-contact, .footer-links {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00aaff;
+}
+
+.footer-legal {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-legal a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #00aaff;
+}
+
+/* -------- BOTÓN VOLVER ARRIBA -------- */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0a2a43;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background: #00aaff;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
