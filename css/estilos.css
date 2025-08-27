@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +7,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
   line-height: 1.6;
 }
 
@@ -34,7 +34,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -43,9 +43,92 @@ body {
   color: #00aaff;
 }
 
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* -------- LISTAS -------- */
+ul {
+    list-style: none;
+}
+
+/* -------- SECCIONES -------- */
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+#indice, #requerimientos {
+  background-color: #0a2a43;
+  color: white;
+}
+
+#beneficios, #funciones, #funcionalidades, #reseñas, #faq {
+  background: #f7f7f7;
+}
+
+button.cta {
+  background: #1A3652;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button.cta:hover {
+  background: #00aaff;
+}
+
+#indice, #formulario, #requisitos, #faq{
+  background-color: #1A3652;
+  color: white;
+}
+
+/* -------- FAQ (ACORDEÓN) -------- */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #ffffff; /* ahora blanco */
+  color: #0a2a43; /* azul oscuro para el texto */
+  text-align: left;
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #0a2a43; /* azul */
+  color: #ffffff; /* texto blanco */
+}
+
+.faq-answer {
+  display: none;
+  padding: 12px;
+  background: #f1f1f1;
+  color: #000;
+}
+
 /* -------- FOOTER -------- */
 footer {
-  background: #0a2a43; /* azul oscuro */
+  background: #0a2a43;
   color: white;
   padding: 2rem;
 }
@@ -53,36 +136,63 @@ footer {
 .footer-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
 .footer-info {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center; /* el bloque central (avisos) se queda en el medio */
+  align-items: center;
+  margin-left: 30%;
+  font-size: 0.9rem;
   max-width: 1000px;
-  flex-wrap: wrap;
+  position: relative; /* permite posicionar las rrss a la izquierda */
 }
 
-.footer-contact, .footer-links {
+.footer-left {
   flex: 1;
+  min-width: 250px; /* asegura que no se encojan demasiado */
   margin: 10px;
+  text-align: left; /* mantiene texto alineado a la izquierda */
 }
 
-.footer-links a {
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  margin-left: 110px; /* <<< añade este espacio extra */
+  text-align: left;
+}
+
+.footer-links a, .footer-legal a {
+  color: #00aaff;
   text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer-links a:hover, .footer-legal a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  position: left;
+  left: 0;
+  margin-left: 60px;
+}
+
+.footer-social a {
   color: white;
+  margin-right: 15px;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
-.footer-links a:hover {
+.footer-social a:hover {
   color: #00aaff;
 }
 
 .footer-legal {
-  margin-top: 10px;
-  font-size: 0.9rem;
+  text-align: center;
 }
 
 .footer-legal a {
@@ -90,24 +200,16 @@ footer {
   text-decoration: none;
 }
 
-.footer-legal a:hover {
-  text-decoration: underline;
+.footer-bottom {
+  display: flex;
+  justify-content: center; /* el bloque central (avisos) se queda en el medio */
+  align-items: center;
+  margin: 15px auto 0 auto;
+  font-size: 0.9rem;
+  max-width: 1000px;
+  position: relative; /* permite posicionar las rrss a la izquierda */
 }
 
-.footer-social {
-  margin-top: 1rem;
-}
-
-.footer-social a {
-  margin: 0 10px;
-  color: white;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.footer-social a:hover {
-  color: #00aaff;
-}
 
 /* -------- BOTÓN VOLVER ARRIBA -------- */
 #scrollTopBtn {
@@ -123,7 +225,7 @@ footer {
   cursor: pointer;
   display: none;
   z-index: 1000;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 #scrollTopBtn:hover {
@@ -133,8 +235,19 @@ footer {
 /* -------- RESPONSIVE -------- */
 @media (max-width: 768px) {
   .navbar ul {
+    display: none;
     flex-direction: column;
     align-items: center;
+    background: #0a2a43;
+    width: 100%;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
   }
 
   .footer-info {

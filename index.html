@@ -5,7 +5,7 @@
         <meta name="author" content="Eva Pérez Martínez">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="facturación, contabilidad">
-        <title>LedgerOva</title>
+        <title>Paylum</title>
         <!--Insertar link para los estilos-->
         <link rel="stylesheet" href="./css/estilos.css">
         <!-- Font Awesome -->
@@ -31,7 +31,7 @@
         <header>
             <nav class="navbar">
                 <ul>
-                    <li><a href="./index.html">(Nombre de la empresa)</a></li> <!--Lleva a la página inicial-->
+                    <li><a href="./index.html">PAYLUM</a></li> <!--Lleva a la página inicial-->
                     <li><a href="./secciones/blog.html">Blog</a></li> <!--Lleva a un blog sobre la empresa-->
                     <li><a href="./secciones/sobreNosotros.html">Sobre Nosotros</a></li> <!--Lleva a una sección dónde se habla de la empresa-->
                     <li><a href="./secciones/registro.html">Registrarse</a></li> <!--Lleva a un apartado para que el user pueda registrarse-->
@@ -45,6 +45,7 @@
         <main>
             <section class="intro">
                 <!-- OJO | INSERTAR UNA INTRODUCCIÓN DE LA EMPRESA (BREVE)-->
+                <p>Paylum es un software que simplifica la gestión financiera para empresas y autónomos. Disponible en dispositivos móviles y de escritorio, garantiza seguridad, rapidez y favilidad de uso en tus procesos contables.</p>
             </section>
             <section class="index">
                 <!--Indice de la página principal (Cada punto llevará al apartado correspondiente)-->
@@ -53,73 +54,121 @@
                     <li><a href="#formulario">Formulario de Contacto</a></li>
                     <li><a href="#funcionesPrincipales">Principales Funcionalidades</a></li>
                     <li><a href="#todasFuncionalidades">Todas las Funcionalidades</a></li>
-                    <li><a href="#requerimientos">Requerimientos Mínimos</a></li> <!-- OJO | Poner también los requerimientos en el apartado de Descargar la APP-->
+                    <li><a href="#requisitos">Requerimientos Mínimos</a></li> <!-- OJO | Poner también los requerimientos en el apartado de Descargar la APP-->
                     <li><a href="#valoraciones">Valoraciones y Reseñas</a></li>
-                    <li><a href="#preguntasFrecuentes">Pregunta Frecuentes</a></li>                    
+                    <li><a href="#faq">Pregunta Frecuentes</a></li>                    
                 </ul>
             </section>
             <!-- OJO | Completar las secciones de la web sobre la app-->
             <section id="beneficios">
-                <h2>Beneficios de (nombre)</h2>
+                <h2>Beneficios de Paylum</h2>
+                <p>Con Paylum podrás llevar tu contabilidad al día, gestionar facturas, controlar gastos y generar reportes financieros de forma clara y rápida. Todo desde una única plataforma segura y confiable.</p>
             </section>
 
             <section id="formulario">
-                <p>Contacta con nosotros a través del siguiente enlace</p>
-                <button><a href="./secciones/contacto.html"><p>Ponte en contacto</p></a></button> <!--Lleva a un apartado para poder contactarnos (un formulario)-->
+                <h2>Formulario de Contacto</h2>
+                <p>Contacta con nosotros a través del siguiente botón</p>
+                <button class="cta" onclick="window.location.href='contacto.html'">Formulario de Contacto</button> <!--Lleva a un apartado para poder contactarnos (un formulario)-->
             </section>
 
             <section id="funcionesPrincipales">
                 <h2>Principales Funcionalidades</h2>
+                <ul>
+                    <li>Gestión de facturación</li>
+                    <li>Reportes automáticos</li>
+                    <li>Control de ingresos y gastos</li>
+                    <li>Soporte para múltiples usuarios y dispositivos</li>
+                </ul>
             </section>
 
             <section id="todasFuncionalidades">
                 <h2>Todas las Funcionalidades</h2>
+                <ul>
+                    <li>Gestión de facturación</li>
+                    <li>Reportes automáticos</li>
+                    <li>Control de ingresos y gastos</li>
+                    <li>Soporte para múltiples usuarios y dispositivos</li>
+                    <li>Exportación de informes en PDF y Excel</li>
+                    <li>Registro de clientes y proveedores</li>
+                    <li>Integración con bases de datos SQLite</li>
+                    <li>Seguridad avanzada con cifrado SQLCipher</li>
+                    <li>Disponibel en Windows, macOs, Android y iOS</li>
+                </ul>
             </section>
 
             <section id="requisitos">
                 <h2>Requisitos Mínimos</h2>
+                <p><strong>Windows/macOS:</strong> 4 GB RAM, 500 MB espacio libre, conexión a internet.</p>
+                <p><strong>Android/iOS:</strong> Versión 10 o superior, 200 MB de espacio libre.</p>
             </section>
 
             <section id="valoraciones">
                 <h2>Valoraciones y Reseñas</h2>
+                <blockquote>
+                    <p>⭐️⭐️⭐️⭐️⭐️ "La mejor app contable que he usado, fácil y segura." - Laura G.</p>
+                </blockquote>
+                <blockquote>
+                    <p>⭐️⭐️⭐️⭐️ "Muy práctica para controlar mis facturas mensuales." - Carlos P.</p>
+                </blockquote>
+                <blockquote>
+                    <p>⭐️⭐️⭐️⭐️⭐️ "Excelente diseño y funcionalidades completas." - Marta S.</p>
+                </blockquote>
             </section>
 
-            <section id="preguntasFrecuentes">
+            <section id="faq">
                 <h2>Preguntas Frecuentes</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">¿En qué dispositivos puedo usar Paylum?</button>
+                        <div class="faq-answer">En Windows, macOS, Android y próximamente en iOS.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿La app funciona sin internet?</button>
+                        <div class="faq-answer">Sí, gracias a la base de datos local SQLite. Solo necesitarás internet para actualizaciones.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿Está segura mi información?</button>
+                        <div class="faq-answer">Sí, usamos SQLCipher para encriptar todos tus datos contables.</div>
+                    </div>
+                </div>
             </section>
-            
-            <!--Botón que te lleve al inicio de la sección sin hacer scroll-->
-            <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
         </main>
 
         <!--Pie de la página-->
         <footer>
             <div class="footer-container">
-                <div class="footer-copyright">
-                    <p>Copyright ©</p>
-                </div>
+                <p style="text-align: center;">© 2025 Paylum. Todos los derechos reservados</p>
                 <div class="footer-info">
-                    <div class="footer-contact">
+                    <div class="footer-left">
+                        <p><strong>Paylum</strong></p>
                         <p>Información de Contacto:</p>
                         <p>Email: perezmartinezeva@gmail.com</p>
                         <p>Tlf: +34 698 54 01 81</p>
+                        <button class="cta" onclick="window.location.href='contacto.html'">Formulario de Contacto</button>
                     </div>
-                    <div class="footer-links">
-                        <a href="#todasFuncionalidades"><p>Funcionalidades</p></a>
+                    <div class="footer-right">
+                        <a href="#todasFuncionalidades"><p>Funcionalidades</p></a> <!-- OJO | QUITAR LA DECORACIÓN DEL TEXTO-->
                         <a href="./secciones/sobreNosotros.html"><p>Sobre Nosotros</p></a>
                     </div>
                 </div>
-                <div class="footer-legal">
-                    <span><a>Avisos Legales</a>    |    </span><span><a href="./secciones/cookies.html">Cookies</a></span> <!-- OJO | FALTAN POR HACER LOS TEXTOS LEGALES-->
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <div class="footer-bottom">
+                    <div class="footer-legal">
+                        <a href="avisosLegales.html">Avisos Legales</a>| 
+                        <a href="cookies.html">Cookies</a> <!-- OJO | FALTAN POR HACER LOS TEXTOS LEGALES-->
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 <!-- OJO | POSIBLE TRADUCTOR AL INGLÉS?????-->
             </div>
         </footer>
+        
+        <!--Botón que te lleve al inicio de la sección sin hacer scroll-->
+        <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+        
         <script src="./js/script.js" defer></script>
     </body>
 </html>
