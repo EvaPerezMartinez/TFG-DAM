@@ -1,21 +1,41 @@
+/* -------- FONTS -------- */
+@import url(https://fonts.google.com/specimen/Newsreader?categoryFilters=Feeling:%2FExpressive%2FBusiness);
+@import url(https://fonts.google.com/specimen/Roboto);
+
 /* Reset */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2{
+  font-family: Newsreader, serif;
+  margin-bottom: 20px;
+  font-size: 40px;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #ffffff;
   color: #000000;
   line-height: 1.6;
 }
 
+main {
+  background-color: #27415C
+}
+
 /* -------- NAVBAR -------- */
 .navbar {
   background: #0a2a43; /* azul oscuro */
-  padding: 1rem;
+  padding: 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -23,13 +43,19 @@ body {
 
 .navbar ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   list-style: none;
   flex-wrap: wrap;
 }
 
 .navbar li {
   margin: 0 15px;
+}
+
+.navbar img {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .navbar a {
@@ -61,17 +87,8 @@ section {
   text-align: center;
 }
 
-#indice, #requerimientos {
-  background-color: #0a2a43;
-  color: white;
-}
-
-#beneficios, #funciones, #funcionalidades, #reseñas, #faq {
-  background: #f7f7f7;
-}
-
 button.cta {
-  background: #1A3652;
+  background: #27415C;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -84,10 +101,39 @@ button.cta:hover {
   background: #00aaff;
 }
 
-#indice, #formulario, #requisitos, #faq{
-  background-color: #1A3652;
+.intro p{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.beneficios p{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.index{
+  background-color: #f7f7f7;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 80px;
+  line-height: 3;
+}
+
+.index ul li a {
+  color: black;
+}
+
+#formulario, #requisitos, #faq{
+  background-color: #27415C;
   color: white;
 }
+
+.intro, #beneficios, #funcionesPrincipales, #todasFuncionalidades, #valoraciones{
+  background-color: #f7f7f7;
+}
+
 
 /* -------- FAQ (ACORDEÓN) -------- */
 .faq-container {
@@ -210,6 +256,27 @@ footer {
   position: relative; /* permite posicionar las rrss a la izquierda */
 }
 
+footer .footer-bottom a {
+  color: white;
+}
+
+footer .footer-right a {
+  color: white;
+}
+
+button.fot {
+  background: #0a2a43;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button.fot:hover {
+  background: #00aaff;
+}
 
 /* -------- BOTÓN VOLVER ARRIBA -------- */
 #scrollTopBtn {
