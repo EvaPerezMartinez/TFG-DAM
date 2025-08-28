@@ -102,11 +102,13 @@ button.cta:hover {
 }
 
 .intro p{
-  padding-left: 15%;
-  padding-right: 15%;
+  font-size: 18px;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
-.beneficios p{
+#beneficios p{
+  font-size: 18px;
   padding-left: 15%;
   padding-right: 15%;
 }
@@ -134,6 +136,63 @@ button.cta:hover {
   background-color: #f7f7f7;
 }
 
+.intro h2, #beneficios h2, #funcionesPrincipales h2, #todasFuncionalidades h2, #valoraciones h2{
+  background-color: #f7f7f7;
+  color: #0a2a43;
+}
+
+/* -------- FUNCIONES PRINCIPALES -------- */
+#funcionesPrincipales {
+  padding: 2rem;
+  text-align: center;
+}
+
+.funciones-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  /* hace que sea responsive */
+  gap: 55px;        /* espacio entre las tarjetas */
+  margin-top: 20px;
+}
+
+.funciones-info {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 220px; /* ancho fijo de cada tarjeta */
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto hover para cada producto */
+.funciones-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+}
+
+.funciones-info i{
+  font-size: 2rem;
+  color: #0a2a43;
+  margin-bottom: 10px;
+}
+
+.funciones-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #0a2a43;
+}
+
+.funciones-info p{
+  font-size: 0.95rem;
+  color: #333;
+}
+.funciones-info img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
 
 /* -------- FAQ (ACORDEÓN) -------- */
 .faq-container {
@@ -170,6 +229,55 @@ button.cta:hover {
   padding: 12px;
   background: #f1f1f1;
   color: #000;
+}
+
+/* ---- CARRUSEL ---- */
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  text-align: center;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-size: 1rem;
+  /* Quitamos la transición que hacía efecto hover */
+  transition: none;
+}
+
+/* ---- PUNTOS ---- */
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-dots span {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-dots span.active {
+  background: #0a2a43;
 }
 
 /* -------- FOOTER -------- */
@@ -320,5 +428,18 @@ button.fot:hover {
   .footer-info {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .funciones-container {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 600px) {
+  .funciones-info {
+    width: 100%; /* en pantallas pequeñas, cada tarjeta ocupa todo el ancho */
+    max-width: 350px;
   }
 }

@@ -11,14 +11,14 @@
     <!-- OJO BORRAR EL COMMENT AL ACABAR | Aquí va un apartado para poder descargar la APP para ordenador o móvil-->
     <body>
         <header>
-            <nav>
+            <nav class="navbar">
                 <ul>
-                    <il><a href="../index.html">(Nombre de la empresa)</a></il> <!--Lleva a la página inicial-->
-                    <il><a href="./blog.html">Blog</a></il> <!--Lleva a un blog sobre la empresa-->
-                    <il><a href="./sobreNosotros.html">Sobre Nosotros</a></il> <!--Lleva a una sección dónde se habla de la empresa-->
-                    <il><a href="./registro.html">Registrarse</a></il> <!--Lleva a un apartado para que el user pueda registrarse-->
-                    <il><a href="./sesion.html">Iniciar Sesión</a></il> <!--Lleva a un apartado para que el user pueda inicar sesión-->
-                    <il><a href="./descarga.html">Descargar</a></il> <!--Lleva a un apartado para que se pueda descargar la app-->
+                    <li><a href="../index.html"><img src="../imagenes/Paylum1.PNG">PAYLUM</a></li> <!--Lleva a la página inicial-->
+                    <li><a href="./blog.html">Blog</a></li> <!--Lleva a un blog sobre la empresa-->
+                    <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li> <!--Lleva a una sección dónde se habla de la empresa-->
+                    <li><a href="./registro.html">Registrarse</a></li> <!--Lleva a un apartado para que el user pueda registrarse-->
+                    <li><a href="./sesion.html">Iniciar Sesión</a></li> <!--Lleva a un apartado para que el user pueda inicar sesión-->
+                    <li><a href="./descarga.html">Descargar</a></li> <!--Lleva a un apartado para que se pueda descargar la app-->
                 </ul>
             </nav>
         </header>
@@ -58,37 +58,43 @@
                     Requisitos para macOS
                 </div>
             </div>
-            <!--Botón que te lleve al inicio de la sección sin hacer scroll-->
-            <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⮝</button>
         </main>
 
         <!--Pie de la página-->
         <footer>
             <div class="footer-container">
-                <div class="footer-copyright">
-                    <p>Copyright ©</p>
-                </div>
+                <p style="text-align: center;">© 2025 Paylum. Todos los derechos reservados</p>
                 <div class="footer-info">
-                    <div class="footer-contact">
+                    <div class="footer-left">
+                        <p><strong>Paylum</strong></p>
                         <p>Información de Contacto:</p>
                         <p>Email: perezmartinezeva@gmail.com</p>
                         <p>Tlf: +34 698 54 01 81</p>
+                        <button class="fot" window.location.href='contacto.html'>Formulario de Contacto</button>
                     </div>
-                    <div class="footer-links">
-                        <a><p>Funcionalidades</p></a>
+                    <div class="footer-right">
+                        <a href="../index.html"><p>Funcionalidades</p></a> 
                         <a href="./sobreNosotros.html"><p>Sobre Nosotros</p></a>
                     </div>
                 </div>
-                <div class="footer-legal">
-                    <span><a>Avisos Legales</a>    |    </span><span><a href="./cookies.html">Cookies</a></span>
+                <div class="footer-bottom">
+                    <div class="footer-legal">
+                        <a href="avisosLegales.html">Avisos Legales</a>| <!-- OJO | FALTAN POR HACER LOS TEXTOS LEGALES-->
+                        <a href="./cookies.html">Cookies</a> 
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com"><img></a> <!-- target="_blank" abre la página en una nueva pestaña (poner en el css)-->
-                    <a href="https://www.twitter.com"><img></a>
-                    <a href="https://www.instagram.com"><img></a>
-                </div>
+                <!-- OJO | POSIBLE TRADUCTOR AL INGLÉS?????-->
             </div>
         </footer>
-        <script src="../js/script.js"></script>
+        
+        <!--Botón que te lleve al inicio de la sección sin hacer scroll-->
+        <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+        
+        <script src="../js/script.js" defer></script>
     </body>
 </html>
