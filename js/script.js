@@ -72,3 +72,25 @@ document.querySelector(".next").addEventListener("click", () => {
   slideIndex = (slideIndex + 1) % slides.length;
   showSlide(slideIndex);
 });
+
+// Blog
+const filterButtons = document.querySelectorAll(".filter-btn");
+const posts = document.querySelectorAll(".blog-post");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // quitar "active" de todos
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const category = btn.getAttribute("data-category");
+
+    posts.forEach(post => {
+      if (category === "all" || post.dataset.category === category) {
+        post.style.display = "block";
+      } else {
+        post.style.display = "none";
+      }
+    });
+  });
+});
