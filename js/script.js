@@ -1,13 +1,12 @@
 // Menú responsive
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".navbar-toggle");
-  const navMenu = document.querySelector(".navbar ul");
+  const toggle = document.getElementById("navbar-toggle");
+  const menu = document.getElementById("navbar-menu");
 
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  }
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+});
 
   // Botón scroll arriba
   const scrollBtn = document.getElementById("scrollTopBtn");
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       answer.style.display = answer.style.display === "block" ? "none" : "block";
     });
   });
-});
+
 
 // ---- CARRUSEL DE RESEÑAS ----
 let slideIndex = 0;

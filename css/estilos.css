@@ -71,9 +71,12 @@ main {
 
 .navbar-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   color: white;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /* -------- LISTAS -------- */
