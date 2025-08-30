@@ -1,12 +1,12 @@
-// ======= Menú responsive =======
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("navbar-toggle");
-  const menu = document.getElementById("navbar-menu");
-  if (toggle && menu) {
-    toggle.addEventListener("click", () => {
+// ======= Menú responsive (funciona en todas las páginas) =======
+document.querySelectorAll(".navbar-toggle").forEach(toggle => {
+  toggle.addEventListener("click", () => {
+    const menu = toggle.parentElement.querySelector(".navbar-menu");
+    if (menu) {
       menu.classList.toggle("active");
-    });
-  }
+    }
+  });
+
 
   // ======= Botón scroll arriba =======
   const scrollBtn = document.getElementById("scrollTopBtn");

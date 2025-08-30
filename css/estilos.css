@@ -300,8 +300,8 @@ button.cta:hover {
   padding: 10px;
   background: #e8e8e8;
   border-radius: 8px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .blog-category .filter-btn {
@@ -348,7 +348,9 @@ button.cta:hover {
 
 .blog-post img {
   width: 100%;
-  border-radius: 8px;
+  height: 200px;        /* altura fija para todas */
+  object-fit: cover;    /* recorta sin deformar */
+  border-radius: 8px;   /* opcional, esquinas redondeadas */
   margin-bottom: 10px;
 }
 
@@ -509,8 +511,24 @@ button.fot:hover {
     display: flex;
   }
 
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0a2a43;
+    position: absolute;
+    top: 60px; /* debajo del nav */
+    right: 0;
+    width: 200px;
+    padding: 15px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
   .navbar-toggle {
     display: block;
+    cursor: pointer;
   }
 
   .footer-info {
