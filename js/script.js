@@ -1,96 +1,93 @@
-// Menú responsive
+// ======= Menú responsive =======
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("navbar-toggle");
   const menu = document.getElementById("navbar-menu");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
-});
-
-  // Botón scroll arriba
-  const scrollBtn = document.getElementById("scrollTopBtn");
-
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  };
-
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // FAQ acordeón
-  const faqQuestions = document.querySelectorAll(".faq-question");
-  faqQuestions.forEach(q => {
-    q.addEventListener("click", () => {
-      const answer = q.nextElementSibling;
-      answer.style.display = answer.style.display === "block" ? "none" : "block";
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
     });
-  });
+  }
 
+  // ======= Botón scroll arriba =======
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  if (scrollBtn) {
+    window.addEventListener("scroll", () => {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
 
-// ---- CARRUSEL DE RESEÑAS ----
-let slideIndex = 0;
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // ======= FAQ acordeón =======
+  const faqQuestions = document.querySelectorAll(".faq-question");
+  if (faqQuestions.length) {
+    faqQuestions.forEach(q => {
+      q.addEventListener("click", () => {
+        const answer = q.nextElementSibling;
+        if (!answer) return;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+      });
+    });
+  }
+
+  // ======= Carrusel de reseñas (solo si existe en la página) =======
+// ======= Carrusel de reseñas (solo con puntos) =======
 const slides = document.querySelectorAll(".carousel-slide");
 const dotsContainer = document.querySelector(".carousel-dots");
 
-// Crear puntos dinámicamente
-slides.forEach((_, i) => {
-  const dot = document.createElement("span");
-  dot.addEventListener("click", () => showSlide(i));
-  dotsContainer.appendChild(dot);
-});
+if (slides.length && dotsContainer) {
+  let slideIndex = 0;
 
-const dots = document.querySelectorAll(".carousel-dots span");
+  // Crear puntos
+  dotsContainer.innerHTML = "";
+  let dots = [];
 
-// Mostrar slide inicial
-showSlide(slideIndex);
-
-function showSlide(n) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    dots[i].classList.remove("active");
-    if (i === n) {
-      slide.classList.add("active");
-      dots[i].classList.add("active");
-    }
+  slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.addEventListener("click", () => showSlide(i));
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
   });
-  slideIndex = n;
+
+  function showSlide(n) {
+    slides.forEach((s, i) => {
+      s.classList.toggle("active", i === n);
+      dots[i].classList.toggle("active", i === n);
+    });
+    slideIndex = n;
+  }
+
+  // Mostrar primer slide
+  showSlide(0);
 }
 
-// Botones siguiente/anterior
-document.querySelector(".prev").addEventListener("click", () => {
-  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-  showSlide(slideIndex);
-});
 
-document.querySelector(".next").addEventListener("click", () => {
-  slideIndex = (slideIndex + 1) % slides.length;
-  showSlide(slideIndex);
-});
+  // ======= Filtro del blog =======
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const posts = document.querySelectorAll(".blog-post");
 
-// Blog
-const filterButtons = document.querySelectorAll(".filter-btn");
-const posts = document.querySelectorAll(".blog-post");
+  if (filterButtons.length && posts.length) {
+    // Mostrar todo por defecto
+    posts.forEach(p => p.style.display = "block");
 
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    // quitar "active" de todos
-    filterButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
 
-    const category = btn.getAttribute("data-category");
+        const category = btn.getAttribute("data-category");
 
-    posts.forEach(post => {
-      if (category === "all" || post.dataset.category === category) {
-        post.style.display = "block";
-      } else {
-        post.style.display = "none";
-      }
+        posts.forEach(post => {
+          const match = (category === "all") || (post.dataset.category === category);
+          post.style.display = match ? "block" : "none";
+        });
+      });
     });
-  });
+  }
 });
