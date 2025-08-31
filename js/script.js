@@ -94,23 +94,46 @@ if (slides.length && dotsContainer) {
   const modal = document.getElementById("popupForm");
   const closeBtn = document.getElementById("cerrarPopup");
 
-  // Abrir con todos los botones que tengan la clase "abrirFormulario"
   document.querySelectorAll(".abrirFormulario").forEach(btn => {
     btn.addEventListener("click", () => {
       modal.style.display = "block";
+
+      const iframe = modal.querySelector("iframe");
+      if (iframe) {
+        // recalcular altura cuando cargue
+        const adjust = () => {
+          try {
+            const doc = iframe.contentWindow.document;
+            const h = Math.min(
+              doc.documentElement.scrollHeight,
+              window.innerHeight * 0.9 // nunca más alto que el 90% de la ventana
+            );
+            iframe.style.height = h + "px";
+          } catch (e) {
+            // si hay problema de mismo origen, mantenemos 75vh
+          }
+        };
+        iframe.addEventListener("load", adjust, { once: true });
+        // por si ya estaba cargado
+        if (iframe.contentWindow?.document?.readyState === "complete") adjust();
+      } 
     });
   });
 
-  // Cerrar con la X
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+  closeBtn?.addEventListener("click", () => (modal.style.display = "none"));
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
   });
 
-  // Cerrar si se hace click fuera del modal
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
+  // Cerrar modal si se hace click en enlace de Políticas
+  document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("link-politicas")) {
+      // Cierra el popup
+      const modal = document.getElementById("popupForm");
+      if (modal) modal.style.display = "none";
     }
   });
+
 
 });

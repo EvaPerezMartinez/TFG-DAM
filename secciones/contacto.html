@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="author" content="Eva Pérez Martínez">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="facturación, contabilidad">
-        <title>Contacto</title>
-        <link rel="stylesheet" href="../css/estilos.css">
-    </head>
-    <!-- OJO BORRAR EL COMMENT AL ACABAR | Aquí va un formulario para ponerse en contacto a través de correo electrónico-->
-    <body>
-        <!--Contenido principal de la web-->
-        <main>
-            <form>
-                <h1>Contacta con Nosotros</h1>
-                <label for="name">Nombre:</label><br>
-                <input type="text" id="name" name="nombre" required><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="subject">Asunto:</label><br>
-                <input type="text" id="subject" name="asunto" required><br>
-                <label for="message">Mensaje:</label><br>
-                <textarea id="message" name="mensaje" rows="4" required></textarea>
-                <br><br>
-                <input type="checkbox" id="politicas" name="politicas" required>
-                <label for="politicas">He leído y acepto las <a href="">Políticas de Privacidad</a>. Esta información será utilizada para ponerse en contacto con usted a través de correo electrónico.*</label> <!--Un link que lleve a las políticas-->
-                <br><br>
-                <button type="submit">Enviar</button>
-                <button type="reset">Cancelar</button>
-            </form>
-        </main>
-        <script src="../js/script.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="author" content="Eva Pérez Martínez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="facturación, contabilidad">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <main>
+    <div class="form-container">
+      <form>
+        <h1>Contacta con Nosotros</h1>
+
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Asunto:</label>
+        <input type="text" id="subject" name="asunto" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="mensaje" rows="4" required></textarea>
+
+        <div class="politicas">
+          <input type="checkbox" id="politicas" name="politicas" required>
+          <label for="politicas">
+            He leído y acepto las <a href="./privacidad.html" target="_blank" class="link-politicas">Políticas de Privacidad</a>.
+          </label>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="cta">Enviar</button>
+          <button type="reset" class="cta cancel">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="../js/script.js"></script>
+</body>
 </html>
