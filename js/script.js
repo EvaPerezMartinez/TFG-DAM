@@ -90,4 +90,27 @@ if (slides.length && dotsContainer) {
       });
     });
   }
+  // ===== Popup Formulario =====
+  const modal = document.getElementById("popupForm");
+  const closeBtn = document.getElementById("cerrarPopup");
+
+  // Abrir con todos los botones que tengan la clase "abrirFormulario"
+  document.querySelectorAll(".abrirFormulario").forEach(btn => {
+    btn.addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+  });
+
+  // Cerrar con la X
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Cerrar si se hace click fuera del modal
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
 });
