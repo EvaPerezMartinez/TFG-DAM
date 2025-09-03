@@ -452,8 +452,9 @@ footer .footer-right a {
   color: white;
 }
 
-button.fot {
-  background: #0a2a43;
+/* Botón de formulario en secciones */
+button.btn-form {
+  background: #0a2a43;  /* azul marino */
   color: white;
   border: none;
   padding: 12px 20px;
@@ -462,7 +463,22 @@ button.fot {
   transition: 0.3s;
 }
 
-button.fot:hover {
+button.btn-form:hover {
+  background: #00aaff;
+}
+
+/* Botón de formulario en footer */
+button.btn-footer {
+  background: #27415C;  /* azul más oscuro */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button.btn-footer:hover {
   background: #00aaff;
 }
 
@@ -684,6 +700,46 @@ button.cta.cancel:hover {
   background: #999;
 }
 
+/* ------- POLÍTICAS DE PRIVACIDAD ------- */
+.politicas-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  color: #333;
+}
+
+.politicas-container h1 {
+  text-align: center;
+  color: #0a2a43; /* azul oscuro usado en la web */
+  margin-bottom: 30px;
+}
+
+.politicas-container h2 {
+  color: #27415C; /* azul marino */
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
+.politicas-container p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.politicas-container ul {
+  margin: 10px 0 20px 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.politicas-container ul li {
+  margin-bottom: 8px;
+}
 
 /* --------- MEJORAS RESPONSIVE (ACTUALIZADAS) --------- */
 
