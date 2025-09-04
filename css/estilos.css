@@ -732,6 +732,11 @@ button.btn-footer:hover {
   .download-section {
     width: 90%;
   }
+
+  .flag-icon {
+    width: 40px;   /* fuerza mismo ancho */
+    height: 16px;  /* fuerza misma altura */
+  }
 }
 
 @media (max-width: 900px) {
