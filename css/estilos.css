@@ -79,6 +79,28 @@ main {
   left: 20px;
 }
 
+/* Contenedor para la bandera */
+.lang-flag {
+  margin-left: auto; /* lo manda al extremo derecho */
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+}
+
+/* Tamaño estándar de banderas */
+.flag-icon {
+  width: 50px;   /* fuerza mismo ancho */
+  height: 20px;  /* fuerza misma altura */
+  object-fit: cover; /* ajusta la imagen sin deformarla */
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.flag-icon:hover {
+  transform: scale(1.1);
+}
+
 /* -------- LISTAS -------- */
 ul {
     list-style: none;
@@ -599,9 +621,7 @@ button.btn-footer:hover {
   justify-content: space-between; /* Botón al fondo */
 }
 
-.download-section:hover {
-  transform: translateY(-5px);
-}
+
 
 .download-section h2 {
   color: #0a2a43;

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Eva Pérez Martínez">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="invoicing, contability">
+        <title>Paylum</title>
+        <!--Insertar link para los estilos-->
+        <link rel="stylesheet" href="../css/estilos.css">
+        <!-- Font Awesome | Se necesita para el menú-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <span class="navbar-toggle">
+                    <i class="fa-solid fa-bars"></i> <!-- Icono hamburguesa -->
+                </span>
+                <li class="lang-flag">
+                    <a href="../index.html">
+                    <img src="../imagenes/spanish.png" alt="English" class="flag-icon">
+                    </a>
+                </li>
+                <ul class="navbar-menu">
+                    <li><a href="./main.html"><img src="../imagenes/Paylum1.PNG">PAYLUM</a></li> <!--Lleva a la página inicial-->
+                    <li><a href="./download.html">Download</a></li> <!--Lleva a un apartado para que se pueda descargar la app-->
+                </ul>
+            </nav>
+        </header>
+
+        <!--Contenido principal de la web-->
+        <main>
+            <section class="intro">                
+                <h1>PAYLUM</h1>
+                <!-- OJO | INSERTAR UNA INTRODUCCIÓN DE LA EMPRESA (BREVE)-->
+                <p>Paylum is software that simplifies financial management for businesses and freelancers. Available on mobile and desktop devices, it guarantees security, speed, and ease of use in your accounting processes.</p>
+            </section>
+            <section class="index">
+                <!--Indice de la página principal (Cada punto llevará al apartado correspondiente)-->
+                <ul>
+                    <li><a href="#beneficios">-Paylum Benefits</a></li>
+                    <li><a href="#formulario">-Contact Form</a></li>
+                    <li><a href="#funcionesPrincipales">-Main Features</a></li>
+                    <li><a href="#todasFuncionalidades">-All Features</a></li>
+                    <li><a href="#requisitos">-Minimum Requirements</a></li> <!-- OJO | Poner también los requerimientos en el apartado de Descargar la APP-->
+                    <li><a href="#valoraciones">-Ratings and Reviews</a></li>
+                    <li><a href="#faq">-Frequently Asked Questions</a></li>                    
+                </ul>
+            </section>
+            <!-- OJO | Completar las secciones de la web sobre la app-->
+            <section id="beneficios">
+                <h2>Paylum Benefits</h2>
+                <p>Using Paylum means simplifying your daily financial tasks. With our application, you can keep complete control of your business from any device, whether it's your office desktop or your mobile phone. Automate repetitive tasks such as generating invoices and reports, keep your accounts organised with an intuitive system, and access all your information in a matter of seconds.</p>
+                <p>What's more, your security is guaranteed thanks to advanced data encryption, ensuring that your accounting information is always protected. As it is multi-platform, you will enjoy the same experience no matter where you work, which translates into greater productivity, fewer errors and greater time savings.</p>
+            </section>
+
+            <section id="formulario">
+                <h2>Contact Form</h2>
+                <p>Do you have any question? Contact us using the button below.</p>
+                <button class="btn-form abrirFormulario">Contact Form</button> <!--Lleva a un apartado para poder contactarnos (un formulario)-->
+                <!-- Popup -->
+                <div id="popupForm" class="modal">
+                    <div class="modal-content">
+                        <span id="cerrarPopup" class="close">&times;</span>
+                        <iframe src="./contact.html"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section id="funcionesPrincipales">
+                <h2>Main Features</h2>
+                <div class="funciones-container">
+                    <div class="funciones-info">
+                        <img src="../imagenes/gestionFacturación.png" alt="Gestión de facturación">
+                        <h3>Invoice Management</h3>
+                        <p>Generate, send and manage your invoices easily and efficiently.</p>
+                    </div>
+                    <div class="funciones-info">
+                        <img src="../imagenes/reportesAutomaticos.png" alt="Gestión de facturación">
+                        <h3>Automatic Reports</h3>
+                        <p>Get detailed financial reports with a single click.</p>
+                    </div>
+                    <div class="funciones-info">
+                        <img src="../imagenes/controlGastosIngresos.PNG" alt="Gestión de facturación">
+                        <h3>Income and Expenditure Control</h3>
+                        <p>Monitor your finances in real time and make informed decisions.</p>
+                    </div>
+                    <div class="funciones-info">
+                        <img src="../imagenes/soporteMultiplesDispositivos.png" alt="Gestión de facturación">
+                        <h3>Support for Multiple Users and Devices</h3>
+                        <p>Access your account from anywhere and any device with complete security.</p>
+                    </div>
+                </div>                
+            </section>
+            <hr style="color: rgb(14, 14, 14); width: 80%; margin: auto; margin-top: 10px; margin-bottom: 10px;">
+            <section id="todasFuncionalidades">
+                <h2>All Features</h2>
+                <div class="funciones-container">
+                    
+                    <div class="funciones-info">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <h3>Invoice Management</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-regular fa-flag"></i>
+                        <h3>Automatic Reports</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-solid fa-money-bills"></i>
+                        <h3>Income and Expenditure Control</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-solid fa-desktop"></i> <i class="fa-solid fa-mobile"></i>
+                        <h3>Support for Multiple Users and Devices</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-solid fa-file-pdf"></i> <i class="fa-solid fa-file-csv"></i>
+                        <h3>Export Reports to PDF and Excel</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-solid fa-people-group"></i>
+                        <h3>Customer and Supplier Registration</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Integration with SQLite Database</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Advanced Security with SQLCipher Encryption</h3>
+                    </div>
+                    <div class="funciones-info">
+                        <i class="fa-brands fa-windows"></i> <i class="fa-brands fa-apple"></i> <i class="fa-brands fa-android"></i>
+                        <h3>Available on Windows, macOS, Android and iOS</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="requisitos">
+                <h2>Minimum Requirements</h2>
+                <p id="req-left"><strong>Windows/macOS:</strong> 4 GB RAM, 500 MB of free space, internet connection.</p>
+                <p id="req-right"><strong>Android/iOS:</strong> Version 10 or higher, 200 MB of free space.</p>
+            </section>
+
+            <section id="valoraciones">
+                <h2>Ratings and Reviews</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <div class="review-card">
+                            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+                            <p>"The best accounting app I have ever used, easy and secure." - Laura G.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card">
+                            <p class="stars">⭐⭐⭐⭐☆</p>
+                            <p>"The app has saved me a lot of time managing my expenses. 
+                            It takes a little getting used to at first, but then it becomes very intuitive." - Javier M.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card">
+                            <p class="stars">⭐⭐⭐⭐☆</p>
+                            <p>"Very practical for keeping track of my monthly bills." - Carlos P.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card">
+                            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+                            <p>“Excellent tool. I can work both from the office and from my mobile without any problems, 
+                            and the reports are very clear. I recommend it 100%!” - Elena R.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card">
+                            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+                            <p>"Excellent design and comprehensive features." - Marta S.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card">
+                            <p class="stars">⭐⭐⭐⭐☆</p>
+                            <p>“Very useful for small businesses like mine. I would like it to have more invoicing templates, 
+                            but overall it meets all my needs.” - David T.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contenedor de puntos -->
+                <div class="carousel-dots"></div>
+            </section>
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">On which devices can I use Paylum?</button>
+                        <div class="faq-answer">On Windows, macOS, Android, and coming soon to iOS.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Does the app work without an internet connection?</button>
+                        <div class="faq-answer">Yes, thanks to the local SQLite database. You will only need an internet connection for updates.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">¿Está segura mi información?</button>
+                        <div class="faq-answer">Yes, we use SQLCipher to encrypt all your accounting data.</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--Pie de la página-->
+        <footer>
+            <div class="footer-container">
+                <p style="text-align: center;">© 2025 Paylum. All rights reserved</p>
+                <div class="footer-info">
+                    <div class="footer-left">
+                        <p><strong>Paylum</strong></p>
+                        <p>Contact Information:</p>
+                        <p>Email: pmartinezeva@gmail.com</p>
+                        <p>Tlf: +34 698 54 01 81</p>
+                        
+                    </div>
+                    <div class="footer-right">
+                        <a href="#todasFuncionalidades"><p>Features</p></a> 
+                        <button class="btn-footer abrirFormulario">Contact Form</button> <!--Lleva a un apartado para poder contactarnos (un formulario)-->
+                        <!-- Popup -->
+                        <div id="popupForm" class="modal">
+                            <div class="modal-content">
+                                <span id="cerrarPopup" class="close">&times;</span>
+                                <iframe src="./contact.html"></iframe>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/home"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- OJO | POSIBLE TRADUCTOR AL INGLÉS?????-->
+            </div>
+        </footer>
+        
+        <!--Botón que te lleve al inicio de la sección sin hacer scroll-->
+        <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+        <script src="../js/script.js" defer></script>
+    </body>
+</html>

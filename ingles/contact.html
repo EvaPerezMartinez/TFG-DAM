@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="author" content="Eva Pérez Martínez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="facturación, contabilidad">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <main>
+    <div class="form-container">
+      <form>
+        <h1>Contact Us</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="asunto" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="mensaje" rows="4" required></textarea>
+
+        <div class="politicas">
+          <input type="checkbox" id="politicas" name="politicas" required>
+          <label for="politicas">
+            I have read and accept the <a href="./privacy.html" target="_blank" class="link-politicas">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="cta">Send</button>
+          <button type="reset" class="cta cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="../js/script.js"></script>
+</body>
+</html>
