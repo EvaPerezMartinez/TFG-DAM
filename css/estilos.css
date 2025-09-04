@@ -558,6 +558,101 @@ button.btn-footer:hover {
   background: #00aaff;
 }
 
+/* ----- SECCIÓN DESCARGAS ----- */
+.download-main {
+  background-color: #f9f9f9;
+}
+
+.download-title {
+  text-align: center;
+  color: #0a2a43;
+  padding: 30px 0 10px 0;
+}
+
+#descarga {
+  background: white; /* Fondo blanco */
+  padding: 40px 20px;
+}
+
+#descarga h1 {
+  text-align: center; /* título centrado */
+  margin-bottom: 30px;
+  color: #0a2a43;
+}
+
+.download-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.download-section {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; /* Forzamos estructura vertical */
+  justify-content: space-between; /* Botón al fondo */
+}
+
+.download-section:hover {
+  transform: translateY(-5px);
+}
+
+.download-section h2 {
+  color: #0a2a43;
+  margin-bottom: 15px;
+}
+
+.download-section p {
+  margin: 6px 0;
+  color: #333;
+  flex-grow: 1;
+}
+
+.download-section button {
+  background: #27415C;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition:  0.3s;
+  align-self: center; /* centrado horizontal */
+}
+
+.download-section button:hover {
+  background: #00aaff;
+}
+
+/* ----- SECCIÓN REQUISITOS ----- */
+.requisitos {
+  background: #0a2a43; /* mismo estilo que índices en index */
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.requisitos h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.requisitos-list {
+  background: rgba(255,255,255,0.1);
+  margin: 10px auto;
+  padding: 15px 20px;
+  border-radius: 8px;
+  max-width: 700px;
+}
+
 /* -------- RESPONSIVE -------- */
 @media (max-width: 768px) {
   .navbar ul {
@@ -605,6 +700,15 @@ button.btn-footer:hover {
   .blog-category {
     justify-content: flex-start; /* alineados a la izquierda en móvil */
     margin: 10px 5px;
+  }
+
+  .download-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-section {
+    width: 90%;
   }
 }
 
