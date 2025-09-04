@@ -85,6 +85,8 @@ main {
   display: flex;
   align-items: center;
   padding-right: 15px;
+  list-style: none;
+  float: right;
 }
 
 /* Tamaño estándar de banderas */
